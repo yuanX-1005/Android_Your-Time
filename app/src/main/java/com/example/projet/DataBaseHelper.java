@@ -37,8 +37,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     private static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + FeedReaderContract.FeedEntry.TABLE_NAME + " (" +
                     FeedReaderContract.FeedEntry._ID + " INTEGER PRIMARY KEY," +
-                    FeedReaderContract.FeedEntry.COLUMN_NAME_TITLE + " INTEGER," +
-                    FeedReaderContract.FeedEntry.COLUMN_NAME_SUBTITLE + " INTEGER)";
+                    FeedReaderContract.FeedEntry.COLUMN_NAME_DATEDEBUT + " INTEGER," +
+                    FeedReaderContract.FeedEntry.COLUMN_NAME_DATEFIN + " INTEGER)";
 
     private static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + FeedReaderContract.FeedEntry.TABLE_NAME;

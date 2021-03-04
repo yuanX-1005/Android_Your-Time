@@ -31,8 +31,8 @@ class MainActivity : AppCompatActivity() {
 
 // Create a new map of values, where column names are the keys
         val values = ContentValues().apply {
-            put(FeedReaderContract.FeedEntry.COLUMN_NAME_TITLE,"YouTime")
-            put(FeedReaderContract.FeedEntry.COLUMN_NAME_SUBTITLE,"Home")
+            put(FeedReaderContract.FeedEntry.COLUMN_NAME_DATEDEBUT,"10000")
+            put(FeedReaderContract.FeedEntry.COLUMN_NAME_DATEFIN,"15000")
         }
 
 // Insert the new row, returning the primary key value of the new row
