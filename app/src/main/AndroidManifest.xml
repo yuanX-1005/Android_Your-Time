@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Projet">
+        <activity android:name=".ui.Ajout"></activity>
         <activity android:name=".Commencer">
             android:parentActivityName=".MainActivity"
         </activity>
