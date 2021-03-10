@@ -2,6 +2,8 @@ package com.example.projet;
 
 import android.provider.BaseColumns;
 
+import org.jetbrains.annotations.Nullable;
+
 public class FeedReaderContract {
     // To prevent someone from accidentally instantiating the contract class,
     // make the constructor private.
@@ -12,6 +14,7 @@ public class FeedReaderContract {
         public static final String TABLE_NAME = "session";
         public static final String COLUMN_NAME_DateDebut = "DateDebut";
         public static final String COLUMN_NAME_SUBTITLE = "DateFin";
+        public static final String COLUMN_NAME_TITLE = "titre";
     }
 
 }

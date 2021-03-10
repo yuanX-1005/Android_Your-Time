@@ -24,6 +24,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         })
 
+        val button_parameter: Button = findViewById(R.id.button_parameter)
+        button_commencer.setOnClickListener(View.OnClickListener {
+            val intent= Intent(this, ParametersActivity::class.java)
+            startActivity(intent)
+        })
+
 
         val dbHelper = DataBaseHelper(this)
         // Gets the data repository in write mode
