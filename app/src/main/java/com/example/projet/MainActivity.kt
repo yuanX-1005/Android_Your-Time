@@ -12,23 +12,27 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+//Initialise le base de données
         val dbHelper = DataBaseHelper(this)
         // Gets the data repository in write mode
+
         val db = dbHelper.writableDatabase
 
-// Create a new map of values, where column names are the keys
+        // Create a new map of values, where column names are the keys
         val values = ContentValues().apply {
             put(FeedReaderContract.FeedEntry.COLUMN_NAME_DATEDEBUT,"10000")
             put(FeedReaderContract.FeedEntry.COLUMN_NAME_DATEFIN,"15000")
         }
 
-// Insert the new row, returning the primary key value of the new row
-        val newRowId = db?.insert(FeedReaderContract.FeedEntry.TABLE_NAME, null, values)
+        // Insert the new row, returning the primary key value of the new row
+        val newRowId = db.insert(FeedReaderContract.FeedEntry.TABLE_SESSION, null, values)
 
-
+//Bottom navigation
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
         val navController = findNavController(R.id.nav_host_fragment)
@@ -41,3 +45,5 @@ class MainActivity : AppCompatActivity() {
 
     }
 }
+
+

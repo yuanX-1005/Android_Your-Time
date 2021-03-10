@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.projet.R
@@ -16,6 +17,7 @@ class DashboardFragment : Fragment() {
   var mylineChart: LineChart? = null
   var mybarchart: BarChart? = null
   var textView: TextView ?=null
+  var button_bd: Button? = null
 
   override fun onCreateView(
     inflater: LayoutInflater,
@@ -24,10 +26,15 @@ class DashboardFragment : Fragment() {
   ): View? {
     val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
     // textView = (TextView) root.findViewById(R.id.text_dashboard);
+    button_bd = root.findViewById(R.id.button_bd)
     textView = root.findViewById(R.id.textView)
+
+
     mylineChart = root.findViewById(R.id.lc_1)
+
+    //改变获取数据的方式
     val entry: MutableList<Entry> = ArrayList()
-    val c1e1 = Entry(10f, 0f)
+    val c1e1 = Entry(10f, 0f) //get les element de la table "..." ;
     val c1e2 = Entry(20f, 5f)
     val c1e3 = Entry(30f, 10f)
     val c1e4 = Entry(40f, 15f)
