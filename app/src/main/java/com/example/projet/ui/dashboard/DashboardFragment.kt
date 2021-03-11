@@ -28,8 +28,6 @@ class DashboardFragment : Fragment() {
     // textView = (TextView) root.findViewById(R.id.text_dashboard);
     button_bd = root.findViewById(R.id.button_bd)
     textView = root.findViewById(R.id.textView)
-
-
     mylineChart = root.findViewById(R.id.lc_1)
 
     //改变获取数据的方式
@@ -42,7 +40,7 @@ class DashboardFragment : Fragment() {
     entry.add(c1e2)
     entry.add(c1e3)
     entry.add(c1e4)
-    val data = LineDataSet(entry, "linechart")
+    val data = LineDataSet(entry, "abc")
     val lineData = LineData(data)
     if(mylineChart==null) {
       mylineChart!!.setData(lineData)

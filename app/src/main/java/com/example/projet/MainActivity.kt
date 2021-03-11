@@ -25,12 +25,12 @@ class MainActivity : AppCompatActivity() {
 
         // Create a new map of values, where column names are the keys
         val values = ContentValues().apply {
-            put(FeedReaderContract.FeedEntry.COLUMN_NAME_DATEDEBUT,"10000")
-            put(FeedReaderContract.FeedEntry.COLUMN_NAME_DATEFIN,"15000")
+            put(FRC.FeedEntry.C_SESS_DEBUT,"10000")
+            put(FRC.FeedEntry.C_SESS_FIN,"15000")
         }
 
         // Insert the new row, returning the primary key value of the new row
-        val newRowId = db.insert(FeedReaderContract.FeedEntry.TABLE_SESSION, null, values)
+        val newRowId = db?.insert(FRC.FeedEntry.T_SESS, null, values)
 
 //Bottom navigation
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
