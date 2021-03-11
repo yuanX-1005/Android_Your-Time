@@ -53,12 +53,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="336dp"
         android:layout_marginLeft="336dp"
-        android:layout_marginBottom="648dp"
+        android:layout_marginBottom="592dp"
         android:clickable="true"
+        android:contentDescription="@string/button_parameter"
+        android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_info_details"
-        android:contentDescription="@string/button_parameter"
-        android:focusable="true" />
+        app:srcCompat="@android:drawable/ic_menu_info_details" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

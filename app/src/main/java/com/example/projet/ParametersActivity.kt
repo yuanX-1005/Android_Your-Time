@@ -20,7 +20,6 @@ class ParametersActivity : AppCompatActivity() {
         val btnColor = findViewById<FloatingActionButton>(R.id.colorPick)
         val btnImg = findViewById<FloatingActionButton>(R.id.addImage)
         btnColor.setOnClickListener(View.OnClickListener() {
-            fun onClick(view: View){
                 val colorPicker = ColorPicker(this@ParametersActivity)
                 val colors: ArrayList<String> = ArrayList()
                 colors.add("#82B926")
@@ -32,7 +31,7 @@ class ParametersActivity : AppCompatActivity() {
                 colors.add("#FA9F00");
                 colors.add("#FF0000");
                 colorPicker
-                    .setTitle(R.string.colorPickTitle.toString())
+                    .setTitle(getString(R.string.colorPickTitle))
                     .setDefaultColorButton(Color.parseColor("#f84c44"))
                     .setColors(colors)
                     .setColumns(4)
@@ -42,18 +41,10 @@ class ParametersActivity : AppCompatActivity() {
                             Log.d("position", "" + pos) // will be fired only when OK button was tapped
                         }
                         override fun onCancel() {}
-                    })
-                    .addListenerButton("colBtn", object : ColorPicker.OnButtonListener {
-                        override fun onClick(view: View, pos: Int, color: Int) {
-                            Log.d("position", "" + pos);
-                        }
                     }).show()
-            }
         });
         btnImg.setOnClickListener(View.OnClickListener() {
-            fun onClick(view: View) {
                 pickImageFromGallery();
-            }
         });
     }
     private fun pickImageFromGallery() {
@@ -65,7 +56,7 @@ class ParametersActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == Activity.RESULT_OK && requestCode == IMAGE_PICK_CODE){
-            val iv: ImageView = findViewById<View>(v) as ImageView
+            val iv: ImageView = findViewById<View>(R.id.v) as ImageView
             iv.setImageURI(data?.data) // handle chosen image
         }
     }

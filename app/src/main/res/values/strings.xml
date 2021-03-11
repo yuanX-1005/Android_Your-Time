@@ -21,4 +21,6 @@
     <string name="addImage">Button pour choisir l image de fond</string>
     <string name="colorPickTitle">Choisissez la couleur du thème</string>
     <string name="button_parameter">Acceder parametre</string>
+    <string name="image">test image</string>
+    <string name="image2">test2 image</string>
 </resources>
