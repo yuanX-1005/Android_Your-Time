@@ -1,7 +1,9 @@
 package com.example.projet
 
-import android.content.ContentValues
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -28,19 +30,19 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         })
 
-        val dbHelper = DataBaseHelper(this)
-        // Gets the data repository in write mode
-        val db = dbHelper.writableDatabase
+        /*     val dbHelper = DataBaseHelper(this)
+            // Gets the data repository in write mode
+            val db = dbHelper.writableDatabase
 
-        val values = ContentValues().apply {
-            put(FeedReaderContract.FeedEntry.COLUMN_NAME_DATEDEBUT,"10000")
-            put(FeedReaderContract.FeedEntry.COLUMN_NAME_DATEFIN,"15000")
-        }
+           val values = ContentValues().apply {
+                put(FeedReaderContract.FeedEntry.COLUMN_NAME_DATEDEBUT,"10000")
+                put(FeedReaderContract.FeedEntry.COLUMN_NAME_DATEFIN,"15000")
+            }
 
 // Insert the new row, returning the primary key value of the new row
         val newRowId = db?.insert(FeedReaderContract.FeedEntry.TABLE_NAME, null, values)
 
-
+*/
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
         val navController = findNavController(R.id.nav_host_fragment)
