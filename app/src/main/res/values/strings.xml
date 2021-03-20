@@ -26,4 +26,10 @@
     <string name="textColor">Couleur du thème : </string>
     <string name="textImgFond">Image de fond : </string>
     <string name="impImage">Importer une image </string>
+    <string name="plus">+</string>
+    <string name="import_sound">Importez l\'audio : </string>
+    <string name="sound_name">Nom de l\'audio : </string>
+    <string name="sound_record">Enregistrez l\'audio : </string>
+    <string name="sound_time">Temps d\'audio maximum de 5 secondes : </string>
+    <string name="ok">OK</string>
 </resources>
