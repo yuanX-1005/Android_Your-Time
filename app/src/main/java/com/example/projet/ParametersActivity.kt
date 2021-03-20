@@ -6,6 +6,7 @@ import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -18,7 +19,7 @@ class ParametersActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_parameters)
         val btnColor = findViewById<FloatingActionButton>(R.id.colorPick)
-        val btnImg = findViewById<FloatingActionButton>(R.id.addImage)
+        val btnImg = findViewById<Button>(R.id.addImage)
         btnColor.setOnClickListener(View.OnClickListener() {
                 val colorPicker = ColorPicker(this@ParametersActivity)
                 val colors: ArrayList<String> = ArrayList()

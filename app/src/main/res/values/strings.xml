@@ -23,4 +23,7 @@
     <string name="button_parameter">Acceder parametre</string>
     <string name="image">test image</string>
     <string name="image2">test2 image</string>
+    <string name="textColor">Couleur du thème : </string>
+    <string name="textImgFond">Image de fond : </string>
+    <string name="impImage">Importer une image </string>
 </resources>
