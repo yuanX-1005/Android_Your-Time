@@ -34,6 +34,7 @@
         android:id="@+id/v"
         android:layout_width="407dp"
         android:layout_height="323dp"
+        android:background="#FFFFFF"
         android:contentDescription="@string/image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
