@@ -3,14 +3,12 @@ package com.example.projet
 import android.app.Activity
 import android.content.Context
 import android.media.RingtoneManager
-import android.net.Uri
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
-import java.lang.Exception
 
 class Commencer : Activity(){
     private var isPaused = false
@@ -109,7 +107,6 @@ class Commencer : Activity(){
 
         return object: CountDownTimer(millisInFuture,countDownInterval){
             val text_view: TextView = findViewById(R.id.text_view)
-            val text_view_statut: TextView = findViewById(R.id.text_view_statut)
 
 
             override fun onTick(millisUntilFinished: Long){
@@ -117,7 +114,7 @@ class Commencer : Activity(){
 
                 val prog_bar: ProgressBar = findViewById(R.id.progress_bar)
                 //progr += 100/millisInFuture
-                text_view_statut.text ="$nbfois"
+
 
                 prog_bar.progress = progr.toInt()
                 //text_view_statut.text = "$progr%"
