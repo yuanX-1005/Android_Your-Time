@@ -1,4 +1,4 @@
-/*package com.example.projet;
+package com.example.projet;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -47,4 +47,3 @@ public static final int DATABASE_VERSION = 1;
 
 
 }
-*/

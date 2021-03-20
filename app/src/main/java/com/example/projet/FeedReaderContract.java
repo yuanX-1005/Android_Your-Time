@@ -2,6 +2,7 @@ package com.example.projet;
 
 import android.provider.BaseColumns;
 
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class FeedReaderContract {
@@ -12,9 +13,10 @@ public class FeedReaderContract {
     /* Inner class that defines the table contents */
     public static class FeedEntry implements BaseColumns {
         public static final String TABLE_NAME = "session";
-        public static final String COLUMN_NAME_DateDebut = "DateDebut";
-        public static final String COLUMN_NAME_SUBTITLE = "DateFin";
+        public static final String COLUMN_NAME_DATEDEBUT = "DateDebut";
+        public static final String COLUMN_NAME_DATEFIN = "DateFin";
         public static final String COLUMN_NAME_TITLE = "titre";
+
     }
 
 }

@@ -1,9 +1,9 @@
 package com.example.projet
 
+import android.content.ContentValues
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -18,11 +18,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val button_commencer: Button = findViewById(R.id.button_commencer)
+      /*  val button_commencer: Button = findViewById(R.id.button_commencer)
         button_commencer.setOnClickListener(View.OnClickListener {
             val intent= Intent(this, Commencer::class.java)
             startActivity(intent)
-        })
+        })*/
 
         val button_parameter = findViewById<FloatingActionButton>(R.id.button_parameter)
         button_parameter.setOnClickListener(View.OnClickListener {
@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         })
 
-        /*     val dbHelper = DataBaseHelper(this)
+             val dbHelper = DataBaseHelper(this)
             // Gets the data repository in write mode
             val db = dbHelper.writableDatabase
 
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 // Insert the new row, returning the primary key value of the new row
         val newRowId = db?.insert(FeedReaderContract.FeedEntry.TABLE_NAME, null, values)
 
-*/
+
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
         val navController = findNavController(R.id.nav_host_fragment)
