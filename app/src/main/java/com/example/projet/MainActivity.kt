@@ -8,12 +8,25 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val button_commencer: Button = findViewById(R.id.button_commencer)
+        button_commencer.setOnClickListener(View.OnClickListener {
+            val intent= Intent(this, Commencer::class.java)
+            startActivity(intent)
+        })
+
+        val button_parameter = findViewById<FloatingActionButton>(R.id.button_parameter)
+        button_parameter.setOnClickListener(View.OnClickListener {
+            val intent= Intent(this, ParametersActivity::class.java)
+            startActivity(intent)
+        })
 
         val dbHelper = DataBaseHelper(this)
         // Gets the data repository in write mode
