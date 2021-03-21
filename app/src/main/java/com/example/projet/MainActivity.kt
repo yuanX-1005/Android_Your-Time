@@ -10,7 +10,6 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.example.projet.fragments.HomeFrag
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
@@ -46,7 +45,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         })
 
-             val dbHelper = DataBaseHelper(this)
+//Base de donnée SQLite (non reussit) ************************
+            val dbHelper = DataBaseHelper(this)
             // Gets the data repository in write mode
             val db = dbHelper.writableDatabase
 
@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
 
 // Insert the new row, returning the primary key value of the new row
         val newRowId = db?.insert(FeedReaderContract.FeedEntry.TABLE_NAME, null, values)
-
+//********************************************************************
 
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
