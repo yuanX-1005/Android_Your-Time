@@ -4,11 +4,13 @@ import android.content.ContentValues
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.projet.fragments.HomeFrag
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
@@ -18,11 +20,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-      /*  val button_commencer: Button = findViewById(R.id.button_commencer)
-        button_commencer.setOnClickListener(View.OnClickListener {
-            val intent= Intent(this, Commencer::class.java)
+        //injecter notre container dans notre fragment_container
+      /* val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.fragment_container, HomeFrag())
+        transaction.addToBackStack(null)
+        transaction.commit()*/
+
+       val buttonAjout : ImageButton = findViewById(R.id.ajoutSeance)
+        buttonAjout.setOnClickListener{
+             val intent = Intent(this, Ajout::class.java)
             startActivity(intent)
-        })*/
+        }
+
+        //BD
+
+        val repo = SeanceBD()
+
+        //repo.updateData()
+
+
 
         val button_parameter = findViewById<FloatingActionButton>(R.id.button_parameter)
         button_parameter.setOnClickListener(View.OnClickListener {
@@ -52,6 +68,7 @@ class MainActivity : AppCompatActivity() {
             R.id.navigation_home, R.id.navigation_stats, R.id.navigation_perso))
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
 
     }
 }

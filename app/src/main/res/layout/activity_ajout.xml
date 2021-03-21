@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="20dp">
+
+
+    <EditText
+        android:id="@+id/nomSeance_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="nom de la séance"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="20dp"
+        android:layout_marginLeft="15dp"
+        android:importantForAutofill="no"
+        android:layout_marginStart="15dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/upload_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Charger Image"/>
+
+        <ImageView
+            android:id="@+id/preview_image"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tour" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="40dp"
+        android:background="@color/gray"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/gray1">
+
+            <EditText
+                android:id="@+id/nomSeq1_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Nom de la séquence"
+                android:hint="Nom Séquence 1"
+                android:inputType="text"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/tempsSeq1_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Temps en minutes"
+                android:inputType="number"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nomSeq1_input" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@color/gray1">
+
+            <EditText
+                android:id="@+id/nomSeq2_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Nom de la séquence"
+                android:hint="Nom Séquence 2"
+                android:inputType="text"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/tempsSeq2_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Temps en minutes"
+                android:inputType="number"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nomSeq2_input" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@color/gray1">
+
+            <EditText
+                android:id="@+id/nomSeq3_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Nom de la séquence"
+                android:hint="Nom Séquence 3"
+                android:inputType="text"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/tempsSeq3_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Temps en minutes"
+                android:inputType="number"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nomSeq3_input" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@color/gray1">
+
+            <EditText
+                android:id="@+id/nomSeq4_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Nom de la séquence"
+                android:hint="Nom Séquence 4"
+                android:inputType="text"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/tempsSeq4_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Temps en minutes"
+                android:inputType="number"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nomSeq4_input" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/song_button"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:hint="Sonnerie" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/confirmer_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CONFIRMER"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginLeft="100dp" />
+
+</LinearLayout>

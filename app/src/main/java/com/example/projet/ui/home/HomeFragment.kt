@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -24,8 +25,8 @@ class HomeFragment : Fragment() {
   ): View? {
     homeViewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)
-    val root = inflater.inflate(R.layout.fragment_home, container, false)
-    val button: Button = root.findViewById(R.id.button_commencer)
+    val root = inflater.inflate(R.layout.item_vertical_seance, container, false)
+    val button: ImageView = root.findViewById(R.id.button_commencer)
     button.setOnClickListener(View.OnClickListener {
       val intent= Intent(context, Commencer::class.java)
       startActivity(intent)
