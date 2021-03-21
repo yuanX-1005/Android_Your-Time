@@ -10,6 +10,7 @@ public class FeedReaderContract {
     // make the constructor private.
     private FeedReaderContract() {}
 
+    //Base de données SQLite (non reussi en fin)
     /* Inner class that defines the table contents */
     public static class FeedEntry implements BaseColumns {
         public static final String TABLE_NAME = "session";

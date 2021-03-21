@@ -5,7 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
-
+//Base de Données SQLite (non reussit)
 public class DataBaseHelper extends SQLiteOpenHelper {
 
 public static final int DATABASE_VERSION = 1;
@@ -44,6 +44,5 @@ public static final int DATABASE_VERSION = 1;
 
   private static final String SQL_DELETE_ENTRIES =
           "DROP TABLE IF EXISTS " + FeedReaderContract.FeedEntry.TABLE_NAME;
-
 
 }

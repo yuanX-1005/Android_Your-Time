@@ -23,8 +23,8 @@ class DashboardFragment : Fragment() {
     savedInstanceState: Bundle?
   ): View? {
     val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
-    // textView = (TextView) root.findViewById(R.id.text_dashboard);
     textView = root.findViewById(R.id.textView)
+    //Line Chart en exemple (sans base de donnée, impossible de réaliser le diagrammes)
     mylineChart = root.findViewById(R.id.lc_1)
     val entry: MutableList<Entry> = ArrayList()
     val c1e1 = Entry(10f, 0f)
@@ -43,6 +43,7 @@ class DashboardFragment : Fragment() {
       mylineChart!!.setData(lineData)
     }
 
+    //Bar Chart en exemple (sans base de donnée, impossible de réaliser le diagrammes)
     mybarchart = root.findViewById(R.id.bc_1)
     val list: MutableList<BarEntry> = ArrayList()
     val da1 = BarEntry(0f, 5f)
